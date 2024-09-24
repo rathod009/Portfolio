@@ -17,7 +17,7 @@ class HomeTab extends StatelessWidget {
       child: Stack(
         children: [
           Positioned(
-            top: 300,
+            top: 350,
             left: 60,
             right: 60,
             child: Opacity(
@@ -38,7 +38,7 @@ class HomeTab extends StatelessWidget {
           Container(
             margin: EdgeInsets.fromLTRB(
               AppDimensions.normalize(30),
-              AppDimensions.normalize(28),
+              AppDimensions.normalize(40),
               0,
               0,
             ),

@@ -2,6 +2,7 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/animations/entrance_fader.dart';
 import 'package:portfolio/configs/configs.dart';
+
 import 'package:portfolio/utils/utils.dart';
 import 'package:portfolio/widget/social_links.dart';
 
@@ -18,7 +19,7 @@ class HomeDesktop extends StatelessWidget {
       child: Stack(
         children: [
           Positioned(
-            bottom: 30,
+            bottom: 0,
             right: 60,
             child: Opacity(
               opacity: 1,
@@ -38,7 +39,7 @@ class HomeDesktop extends StatelessWidget {
           Container(
             margin: EdgeInsets.fromLTRB(
               AppDimensions.normalize(30),
-              AppDimensions.normalize(50),
+              AppDimensions.normalize(70),
               0,
               0,
             ),
