@@ -1,10 +1,33 @@
 {
   "hosting": {
-    "public": "build/web",
+    "public": "build.web",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
     ]
+  },
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "bhumik-rathod",
+          "appId": "1:936006119802:android:5699cfeaa3ba452f7066c3",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "bhumik-rathod",
+          "configurations": {
+            "android": "1:936006119802:android:5699cfeaa3ba452f7066c3",
+            "ios": "1:936006119802:ios:7b341536344fe9447066c3",
+            "macos": "1:936006119802:ios:7b341536344fe9447066c3",
+            "web": "1:936006119802:web:e21c121bb8e6f98e7066c3",
+            "windows": "1:936006119802:web:4971eaec40f994b97066c3"
+          }
+        }
+      }
+    }
   }
 }
