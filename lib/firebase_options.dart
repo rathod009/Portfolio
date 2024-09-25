@@ -64,7 +64,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '936006119802',
     projectId: 'bhumik-rathod',
     storageBucket: 'bhumik-rathod.appspot.com',
-    iosBundleId: 'com.example.portfolio',
+    iosBundleId: 'com.portfolio.app',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
@@ -73,7 +73,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '936006119802',
     projectId: 'bhumik-rathod',
     storageBucket: 'bhumik-rathod.appspot.com',
-    iosBundleId: 'com.example.portfolio',
+    iosBundleId: 'com.portfolio.app',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
