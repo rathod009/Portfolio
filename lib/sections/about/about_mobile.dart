@@ -69,7 +69,7 @@ class AboutMobile extends StatelessWidget {
           Space.x!,
           Text(
             'Technologies I have worked with:',
-            style: AppText.l1b!.copyWith(
+            style: AppText.b2!.copyWith(
               color: AppTheme.c!.primary,
             ),
           ),

@@ -19,10 +19,12 @@ class StaticUtils {
   static const String university = 'assets/work/nirma.png';
 
   // services
-  static const String uiux = 'assets/services/ui.png';
   static const String appDev = 'assets/services/app.png';
+  static const String frontend = 'assets/services/web.png';
+  static const String uiux = 'assets/services/ui.png';
   static const String openSource = 'assets/services/open.png';
   static const String openSourceBlack = 'assets/services/open_b.png';
+  static const String videoEditing = 'assets/services/video.png';
 
   // Calling through Links
   static const List<String> socialIconURL = [

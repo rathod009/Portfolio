@@ -14,7 +14,7 @@ class ToolTechWidget extends StatelessWidget {
         Icon(
           Icons.play_arrow,
           color: AppTheme.c!.primary,
-          size: AppDimensions.normalize(6),
+          size: AppDimensions.normalize(5),
         ),
         Text(
           " $techName ",

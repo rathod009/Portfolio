@@ -19,7 +19,7 @@ class ServiceMobile extends StatelessWidget {
         CarouselSlider.builder(
           itemCount: ServicesUtils.servicesTitles.length,
           itemBuilder: (BuildContext context, int itemIndex, int i) => Padding(
-            padding: const EdgeInsets.symmetric(vertical: 10.0),
+            padding: const EdgeInsets.symmetric(vertical: 16.0),
             child: _ServiceCard(
               serviceIcon: ServicesUtils.servicesIcons[i],
               serviceTitle: ServicesUtils.servicesTitles[i],

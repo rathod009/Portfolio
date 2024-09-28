@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/configs/configs.dart';
 import 'package:portfolio/constants.dart';
 import 'package:portfolio/provider/app_provider.dart';
-
 import 'package:provider/provider.dart';
 
 class ProjectCard extends StatefulWidget {

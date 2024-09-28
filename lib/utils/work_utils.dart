@@ -11,5 +11,5 @@ class WorkUtils {
     "http://techelecon.com/"
   ];
 
-  static const List<double> communityLogoHeight = [56.0, 56.0];
+  static const List<double> communityLogoHeight = [52.0, 52.0];
 }

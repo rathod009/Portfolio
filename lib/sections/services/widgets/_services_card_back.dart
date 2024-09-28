@@ -70,7 +70,7 @@ class _ServiceCardBackWidget extends StatelessWidget {
                           MaterialButton(
                             height: 40.0,
                             onPressed: () => openURL(
-                              'https://www.upwork.com/freelancers/~0197b0f6aaeba9675f',
+                              'https://www.upwork.com/freelancers/~0174a959a6ebc6667e',
                             ),
                             color: const Color(0xff13A800),
                             child: Row(
