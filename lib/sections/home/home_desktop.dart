@@ -19,7 +19,7 @@ class HomeDesktop extends StatelessWidget {
       child: Stack(
         children: [
           Positioned(
-            bottom: 0,
+            bottom: 40,
             right: 60,
             child: Opacity(
               opacity: 1,
@@ -31,7 +31,7 @@ class HomeDesktop extends StatelessWidget {
                   StaticUtils.blackWhitePhoto,
                   height: size.width < 1200
                       ? size.height * 0.55
-                      : size.height * 0.6,
+                      : size.height * 0.65,
                 ),
               ),
             ),
@@ -39,7 +39,7 @@ class HomeDesktop extends StatelessWidget {
           Container(
             margin: EdgeInsets.fromLTRB(
               AppDimensions.normalize(30),
-              AppDimensions.normalize(70),
+              AppDimensions.normalize(40),
               0,
               0,
             ),

@@ -29,8 +29,8 @@ class HomeTab extends StatelessWidget {
                 child: Image.asset(
                   StaticUtils.blackWhitePhoto,
                   height: size.width < 1200
-                      ? size.height * 0.55
-                      : size.height * 0.65,
+                      ? size.height * 0.50
+                      : size.height * 0.60,
                 ),
               ),
             ),
