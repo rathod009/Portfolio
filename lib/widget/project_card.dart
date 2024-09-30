@@ -134,6 +134,9 @@ class ProjectCardState extends State<ProjectCard> {
                 Text(
                   widget.projectDescription,
                   textAlign: TextAlign.center,
+                  style: AppText.b2b?.copyWith(
+                    fontSize: 12.0, // Adjust the font size as per your requirement
+                  ),
                 ),
                 SizedBox(
                   height: height * 0.01,
@@ -144,7 +147,7 @@ class ProjectCardState extends State<ProjectCard> {
               duration: const Duration(milliseconds: 400),
               opacity: isHover ? 0.0 : 1.0,
               child: FittedBox(
-                fit: BoxFit.fill,
+                fit: BoxFit.contain,
                 child: widget.banner != null
                     ? Image.asset(
                         widget.banner!,

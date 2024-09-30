@@ -24,7 +24,7 @@ class PortfolioMobileTab extends StatelessWidget {
         CarouselSlider.builder(
           itemCount: ProjectUtils.titles.length,
           itemBuilder: (BuildContext context, int itemIndex, int i) => Padding(
-            padding: const EdgeInsets.symmetric(vertical: 20.0),
+            padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 0),
             child: ProjectCard(
               banner: ProjectUtils.banners[i],
               projectIcon: ProjectUtils.icons[i],
@@ -34,7 +34,7 @@ class PortfolioMobileTab extends StatelessWidget {
             ),
           ),
           options: CarouselOptions(
-            height: height * 0.28,
+            height: height * 0.30,
             autoPlay: true,
             autoPlayInterval: const Duration(seconds: 5),
             enlargeCenterPage: true,
