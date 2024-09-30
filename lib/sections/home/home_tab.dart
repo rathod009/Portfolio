@@ -96,6 +96,11 @@ class HomeTab extends StatelessWidget {
                             textStyle: AppText.b1,
                           ),
                           TyperAnimatedText(
+                            ' Video Editor',
+                            speed: const Duration(milliseconds: 50),
+                            textStyle: AppText.b1,
+                          ),
+                          TyperAnimatedText(
                             ' A friend :)',
                             speed: const Duration(milliseconds: 50),
                             textStyle: AppText.b1,

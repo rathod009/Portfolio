@@ -12,7 +12,6 @@ class PortfolioDesktop extends StatefulWidget {
   @override
   State<PortfolioDesktop> createState() => _PortfolioDesktopState();
 }
-
 class _PortfolioDesktopState extends State<PortfolioDesktop> {
   @override
   Widget build(BuildContext context) {

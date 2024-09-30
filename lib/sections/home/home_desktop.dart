@@ -2,7 +2,6 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/animations/entrance_fader.dart';
 import 'package:portfolio/configs/configs.dart';
-
 import 'package:portfolio/utils/utils.dart';
 import 'package:portfolio/widget/social_links.dart';
 
@@ -14,12 +13,12 @@ class HomeDesktop extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
 
     return Container(
-      height: size.height * 1.025,
+      height: size.height * 1.08,
       padding: Space.h,
       child: Stack(
         children: [
           Positioned(
-            bottom: 40,
+            bottom: 70,
             right: 60,
             child: Opacity(
               opacity: 1,
@@ -94,6 +93,11 @@ class HomeDesktop extends StatelessWidget {
                           ),
                           TyperAnimatedText(
                             ' UI/UX Enthusiast',
+                            speed: const Duration(milliseconds: 50),
+                            textStyle: AppText.b1,
+                          ),
+                          TyperAnimatedText(
+                            ' Video Editor',
                             speed: const Duration(milliseconds: 50),
                             textStyle: AppText.b1,
                           ),

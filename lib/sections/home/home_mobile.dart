@@ -16,7 +16,7 @@ class HomeMobile extends StatelessWidget {
       child: Stack(
         children: [
           Positioned(
-            bottom: 0.0,
+            bottom: 0,
             right: -AppDimensions.normalize(-10),
             child: Opacity(
               opacity: 1,
@@ -79,6 +79,11 @@ class HomeMobile extends StatelessWidget {
                           speed: const Duration(milliseconds: 50),
                           textStyle: AppText.b1,
                         ),
+                        TyperAnimatedText(
+                            ' Video Editor',
+                            speed: const Duration(milliseconds: 50),
+                            textStyle: AppText.b1,
+                          ),
                         TyperAnimatedText(
                           ' A friend :)',
                           speed: const Duration(milliseconds: 50),
