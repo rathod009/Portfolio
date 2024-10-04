@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/sections/about/about.dart';
+import 'package:portfolio/sections/certifications/certifications.dart';
 import 'package:portfolio/sections/contact/contact.dart';
 import 'package:portfolio/sections/home/home.dart';
 import 'package:portfolio/sections/portfolio/portfolio.dart';
@@ -35,6 +36,7 @@ class StaticUtils {
     "https://img.icons8.com/?size=100&id=30888&format=png&color=ffffff"    
   ];
 
+  // Social media links
   static const List<String> socialLinks = [
     "https://linkedin.com/in/bhumik-rathod-235b8a148",
     "https://wa.me/+917046392688",
@@ -43,10 +45,15 @@ class StaticUtils {
     "https://discord.gg/3CMp8DWBwy"
   ];
 
+  //Resume link
   static const String resume =
-      'https://drive.google.com/file/d/1JG1v95Kbb5KZSoko-h2JNgxXKPmT2o4d/view?usp=sharing';
+      'https://drive.google.com/file/d/1CZNAGHTh7CGvrD9GmAAA8_D2nes4dXtY/view?usp=sharing';
 
+  //Github link
   static const String gitHub = 'https://github.com/rathod009';
+
+  //Certifications link
+  static const String certifications = 'https://drive.google.com/drive/folders/1vS7U3Spn0h2c3-wWjSogK2sMfxEbpN_I?usp=sharing';
 }
 
 class BodyUtils {
@@ -54,7 +61,7 @@ class BodyUtils {
     HomePage(),
     About(),
     Services(),
-    // Certifications(),
+    Certificate(),
     Portfolio(),
     Contact(),
     Footer(),

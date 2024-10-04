@@ -9,9 +9,9 @@ void openURL(String url) => launchUrl(
 final kTools = [
   "HTML",
   "CSS",
-  "JavaScript",
+  "JS",
   "Java",
   "Dart",
   "Python",
-  "Php"
+  "Php",
 ];

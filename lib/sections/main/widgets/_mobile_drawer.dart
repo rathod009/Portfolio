@@ -1,7 +1,6 @@
 part of '../main_section.dart';
 
 class _MobileDrawer extends StatelessWidget {
-  // ignore: unused_element
   const _MobileDrawer({super.key});
 
   @override
@@ -9,9 +8,12 @@ class _MobileDrawer extends StatelessWidget {
     final appProvider = Provider.of<AppProvider>(context);
     final scrollProvider = Provider.of<ScrollProvider>(context);
 
+    // Define the text color based on dark mode
+    final textColor = appProvider.isDark ? Colors.white : Colors.black;
+
     return Drawer(
       child: Material(
-        color: appProvider.isDark ? Colors.grey[900] : Colors.white60,
+        color: appProvider.isDark ? Colors.black : Colors.white60,
         child: Padding(
           padding: const EdgeInsets.fromLTRB(0, 25.0, 0, 0),
           child: Column(
@@ -26,15 +28,15 @@ class _MobileDrawer extends StatelessWidget {
                   Icons.light_mode,
                   color: AppTheme.c!.primary!,
                 ),
-                title: const Text(
+                title: Text(
                   "Dark Mode",
+                  style: TextStyle(color: textColor),
                 ),
                 trailing: Switch(
                   inactiveTrackColor: Colors.grey,
                   value: appProvider.isDark,
                   onChanged: (value) {
-                    appProvider
-                        .setTheme(value ? ThemeMode.dark : ThemeMode.light);
+                    appProvider.setTheme(value ? ThemeMode.dark : ThemeMode.light);
                   },
                   activeColor: AppTheme.c!.primary,
                 ),
@@ -56,7 +58,7 @@ class _MobileDrawer extends StatelessWidget {
                           ),
                           title: Text(
                             e.value,
-                            style: AppText.l1,
+                            style: AppText.l1?.copyWith(color: textColor),
                           ),
                         ),
                       ),
@@ -70,13 +72,14 @@ class _MobileDrawer extends StatelessWidget {
                       borderRadius: BorderRadius.circular(5.0),
                       side: BorderSide(color: AppTheme.c!.primary!)),
                   onPressed: () => openURL(StaticUtils.resume),
-                  child: const ListTile(
+                  child: ListTile(
                     leading: Icon(
                       Icons.book,
-                      color: Colors.blueAccent,
+                      color: AppTheme.c!.primary,
                     ),
                     title: Text(
                       'RESUME',
+                      style: TextStyle(color: textColor),
                     ),
                   ),
                 ),

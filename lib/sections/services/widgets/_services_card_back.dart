@@ -19,7 +19,7 @@ class _ServiceCardBackWidget extends StatelessWidget {
           style: AppText.l1,
         ),
         Divider(
-          color: appProvider.isDark ? Colors.white : Colors.black38,
+          color: appProvider.isDark ? Colors.white : Colors.black,
         ),
         SizedBox(
           height: AppDimensions.normalize(14),
@@ -44,7 +44,7 @@ class _ServiceCardBackWidget extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           MaterialButton(
-                            height: 40.0,
+                            height: 42.0,
                             onPressed: () => openURL(
                               'https://api.whatsapp.com/send?phone=917046392688',
                             ),
@@ -78,7 +78,7 @@ class _ServiceCardBackWidget extends StatelessWidget {
                               children: [
                                 Image.network(
                                   'https://img.icons8.com/ios-filled/50/000000/upwork.png',
-                                  height: 35.0,
+                                  height: 26.0,
                                   color: Colors.white,
                                 ),
                                 Space.x!,

@@ -22,7 +22,8 @@ class NavBarActionButton extends StatelessWidget {
       delay: const Duration(milliseconds: 100),
       duration: const Duration(milliseconds: 250),
       child: Container(
-        margin: Space.h!,
+        margin: const EdgeInsets.fromLTRB(4, 1, 4, 1),
+        // margin: Space.h!,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10.0),
         ),
