@@ -34,10 +34,10 @@ class SocialLinks extends StatelessWidget {
               padding: EdgeInsets.all(padding),
               child: IconButton(
                 highlightColor: Colors.white54,
-                splashRadius: AppDimensions.normalize(12),
+                splashRadius: AppDimensions.normalize(10),
                 icon: Image.network(
                   e.value,
-                  color: appProvider.isDark ? Colors.white : Colors.black,
+                  color: appProvider.isDark ? Colors.black : Colors.black,
                   height: iconSize,
                 ),
                 iconSize: iconSize,
