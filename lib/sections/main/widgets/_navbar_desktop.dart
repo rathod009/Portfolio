@@ -1,7 +1,7 @@
 part of '../main_section.dart';
 
 class _NavbarDesktop extends StatelessWidget {
-  const _NavbarDesktop({super.key});
+  const _NavbarDesktop();
 
   @override
   Widget build(BuildContext context) {
@@ -66,7 +66,7 @@ class _NavbarDesktop extends StatelessWidget {
 }
 
 class _NavBarTablet extends StatelessWidget {
-  const _NavBarTablet({super.key});
+  const _NavBarTablet();
 
   @override
   Widget build(BuildContext context) {
