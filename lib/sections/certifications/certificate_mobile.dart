@@ -31,7 +31,7 @@ class CertificateMobileTab extends StatelessWidget {
             ),
           ),
           options: CarouselOptions(
-            height: height * 0.50,
+            height: height * 0.36,
             autoPlay: true,
             autoPlayInterval: const Duration(seconds: 5),
             enlargeCenterPage: true,
