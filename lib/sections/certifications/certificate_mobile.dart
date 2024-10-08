@@ -19,7 +19,7 @@ class CertificateMobileTab extends StatelessWidget {
           text: "\nCertifications",
         ),
         const CustomSectionSubHeading(
-          text: "Here are some of the certifications I've earned to enhance my skills and knowledge :)\n\n",
+          text: "Here are some of the certifications I've earned :)\n\n",
         ),
         CarouselSlider.builder(
           itemCount: CertificationsUtils.titles.length,
@@ -31,7 +31,7 @@ class CertificateMobileTab extends StatelessWidget {
             ),
           ),
           options: CarouselOptions(
-            height: height * 0.30,
+            height: height * 0.36,
             autoPlay: true,
             autoPlayInterval: const Duration(seconds: 5),
             enlargeCenterPage: true,

@@ -44,6 +44,7 @@ class PortfolioMobileTab extends StatelessWidget {
           ),
         ),
         Space.y!,
+        Space.y!,
         SizedBox(
           height: AppDimensions.normalize(16),
           width: AppDimensions.normalize(50),

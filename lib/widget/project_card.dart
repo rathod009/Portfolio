@@ -56,7 +56,7 @@ class ProjectCardState extends State<ProjectCard> {
         }
       },
       child: Container(
-        margin: Space.v,
+        margin: Space.h,
         padding: Space.all(),
         width: AppDimensions.normalize(150),
         height: AppDimensions.normalize(90),
