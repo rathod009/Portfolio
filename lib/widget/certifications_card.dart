@@ -65,7 +65,7 @@ class CertificateCardState extends State<CertificateCard> with SingleTickerProvi
           return Transform(
             alignment: Alignment.center,
             transform: Matrix4.rotationY(_animation.value * pi),
-            child: _animation.value < 0.7
+            child: _animation.value < 0.5
                 ? _buildFrontCard(appProvider, width, height)
                 : Transform(
                     alignment: Alignment.center,
@@ -81,7 +81,7 @@ class CertificateCardState extends State<CertificateCard> with SingleTickerProvi
   // Front side with the certificate image
   Widget _buildFrontCard(AppProvider appProvider, double width, double height) {
     return Container(
-      margin: Space.h,
+      margin: Space.v,
       padding: Space.all(),
       width: AppDimensions.normalize(150),
       height: AppDimensions.normalize(90),
@@ -110,7 +110,7 @@ class CertificateCardState extends State<CertificateCard> with SingleTickerProvi
   // Back side with the certificate title
   Widget _buildBackCard(AppProvider appProvider, double width, double height) {
     return Container(
-      margin: Space.h,
+      margin: Space.v,
       padding: Space.all(),
       width: AppDimensions.normalize(150),
       height: AppDimensions.normalize(90),
