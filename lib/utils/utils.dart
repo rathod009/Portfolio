@@ -16,8 +16,10 @@ class StaticUtils {
   static const String blackWhitePhoto = 'assets/photos/black-white.png';
 
   // work
-  static const String techelecon = 'assets/work/tech_elecon.png';
   static const String university = 'assets/work/nirma.png';
+  static const String clarionit = 'assets/work/clarionit.png';
+  static const String techelecon = 'assets/work/tech_elecon.png';
+  
 
   // services
   static const String appDev = 'assets/services/app.png';
