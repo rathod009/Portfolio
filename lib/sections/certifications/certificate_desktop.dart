@@ -31,9 +31,9 @@ class _CertificateDesktopState extends State<CertificateDesktop> {
             physics: const NeverScrollableScrollPhysics(), // To prevent inner scrolling
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 4, // 4 items per row
-              mainAxisSpacing: 10.0, // Spacing between rows
-              crossAxisSpacing: 10.0, // Spacing between columns
-              childAspectRatio: 1.8, // Adjust for card proportions
+              mainAxisSpacing: 0.0, // Spacing between rows
+              crossAxisSpacing: 20.0, // Spacing between columns
+              childAspectRatio: 1.5, // Adjust for card proportions
             ),
             itemCount: CertificationsUtils.certificates.length,
             itemBuilder: (context, index) {

@@ -26,7 +26,9 @@ class CertificationsUtils {
     "assets/certifications/NU-LogicXampify.jpg",
     "assets/certifications/NU-Series_Crackers.jpg",
     "assets/certifications/SPEC-TechnoFest_2022.jpg",
+    // "assets/certifications/Summer.jpg",
     // "assets/certifications/TataCrucible_2023.jpg",
+    // "assets/certifications/Winter.jpg",
     // Add more certifications here
   ];
 
@@ -57,7 +59,9 @@ class CertificationsUtils {
     "Nirma University - LogicXampify",
     "Nirma University - Beyond Coders Series Crackers",
     "Sardar Patel Education Campus - TechnoFest 2022",
+    // "Summer Internship",
     // "Tata Crucible 2023",
+    // "Winter Internship",
     // Add more titles here
   ];
 }
