@@ -43,7 +43,7 @@ class _PortfolioDesktopState extends State<PortfolioDesktop> {
                 )
                 .toList(),
           ),
-          Space.y2!,
+          Space.y!,
           SizedBox(
             height: AppDimensions.normalize(14),
             width: AppDimensions.normalize(50),
