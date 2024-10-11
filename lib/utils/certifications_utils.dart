@@ -3,7 +3,7 @@ class CertificationsUtils {
     // "assets/certifications/ACC-CTIT_PPT.jpg",
     // "assets/certifications/DataIsGood-2024.jpg",
     // "assets/certifications/Flipkart_Grid-5.jpg",
-    "assets/certifications/GAH_2024.jpg",
+    "assets/certifications/GAH_2024.jpeg",
     "assets/certifications/GL-Flutter_2024.jpg",
     // "assets/certifications/GoogleCloud_API.png",
     // "assets/certifications/GoogleCloud_DK.png",

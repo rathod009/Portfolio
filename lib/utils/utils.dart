@@ -23,7 +23,8 @@ class StaticUtils {
 
   // services
   static const String appDev = 'assets/services/app.png';
-  static const String frontend = 'assets/services/web.png';
+  static const String webDev = 'assets/services/web.png';
+  static const String frontend = 'assets/services/front.png';
   static const String uiux = 'assets/services/ui.png';
   static const String openSource = 'assets/services/open.png';
   static const String openSourceBlack = 'assets/services/open_b.png';
