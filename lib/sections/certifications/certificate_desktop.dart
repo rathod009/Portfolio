@@ -27,13 +27,13 @@ class _CertificateDesktopState extends State<CertificateDesktop> {
             text: "Here are some of the certifications I've earned to enhance my skills and knowledge :)\n\n",
           ),
           GridView.builder(
-            shrinkWrap: true, // Ensures it doesn't scroll separately
+            shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(), // To prevent inner scrolling
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 4, // 4 items per row
               mainAxisSpacing: 0.0, // Spacing between rows
               crossAxisSpacing: 14.0, // Spacing between columns
-              childAspectRatio: 1.5, // Adjust for card proportions
+              childAspectRatio: 1.6, // Adjust for card proportions
             ),
             itemCount: CertificationsUtils.certificates.length,
             itemBuilder: (context, index) {
