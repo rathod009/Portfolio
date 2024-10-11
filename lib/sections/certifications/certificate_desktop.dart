@@ -33,7 +33,7 @@ class _CertificateDesktopState extends State<CertificateDesktop> {
               crossAxisCount: 4, // 4 items per row
               mainAxisSpacing: 0.0, // Spacing between rows
               crossAxisSpacing: 14.0, // Spacing between columns
-              childAspectRatio: 1.6, // Adjust for card proportions
+              childAspectRatio: 1.8, // Adjust for card proportions
             ),
             itemCount: CertificationsUtils.certificates.length,
             itemBuilder: (context, index) {
