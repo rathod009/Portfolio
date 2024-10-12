@@ -1,41 +1,51 @@
 class ProjectUtils {
   static const List<String> banners = [
     "assets/projects/gearcareB.png",
+    "assets/projects/bookingsystemB.png",
+    "assets/projects/eyegazeestimatB.png",
+    // "assets/projects/expensetrackerB.png",
+    // "assets/projects/airlineanalyticsB.png",
+    // "assets/projects/smartbrakingB.png",
+    // "assets/projects/gasagencysystemB.png",
   ];
 
   static const List<String> icons = [
     "assets/projects/gearcare.png",
+    "assets/projects/bookingsystem.png",
+    "assets/projects/eyegazeestimat.png",
+    // "assets/projects/expensetracker.png",
+    // "assets/projects/airlineanalytics.png",
+    // "assets/projects/smartbraking.png"
+    // "assets/projects/gasagencysystem.png",
   ];
 
   static const List<String> titles = [
     "GearCare",
+    "Vehicle Booking System",
+    "Eye Gaze Estimation - Webcam",
+    // "Expense Tracker",
+    // "Airline Data Analytics",
+    // "Smart Braking System",
+    // "Gas Agency System",
   ];
 
   static const List<String> description = [
-    // "A very unique dart package to uplift the snackbar experience in flutter. Available at pub.dev now!",
-    // "Application of Holy book of Muslims, Al-Qur'an. Developed using Flutter. Powered with live RestAPI given in README.md",
-    // "A Phramacy app developed using Flutter powered with Firebase as database with Doctor and Patient panels.",
     "GearCare is a multi-purpose app that deals with gear registration, condition-based monitoring, service notifications, and field service surveys.",
-    // "A live trakcer for COVID19 stats across the Globe and my Home country Pakistan. It uses APIs so the data is live.",
-    // "Tried to clone the famous Chat Heads by Facebook Messenger using Flutter. Its basically in-app not exactly like the original chat head.",
-    // "Flutter Official Site clone using Flutter Web. Try the live site here. For the time being its not responsive fully so there might be responsiveness issues.",
-    // "A concept of Music App developed using Flutter. Having functionality of playing Audio.",
-    // "A simple GUI based Java application that sends file from Client to Server but not the other way around.",
-    // "A concept app for self-services at various restaurants now a days. More like a Restaurant Ordering System.",
-    // "Its my end semester project. The whole design I developed here is an inspiration from my favortie Flutter Developer Marcin Szałek and his blog Fidev."
+    "Vehicle Booking System is a web-based application that allows users to book vehicles for their trips. It also allows the admin to manage the vehicles and bookings.",
+    "Eye Gaze Estimation is a web-based application that estimates the gaze of the user using a webcam. It uses the OpenCV library to detect the face and eyes of the user and estimate the gaze direction.",
+    // "Expense Tracker is a android application that allows users to track their expenses. It also allows the user to see daily, monthly & yearly expenses and search for a specific expense if needed.",
+    // "Airline Data Analytics is a web-based application that allows users to analyze the data of airlines. It provides various features like searching for a specific airline, viewing the details of the airline, and comparing the data of different airlines.",
+    // "Smart Braking System is a IoT-based project that uses a small toy car with L298D motor driver, DC motor, an ultrasonic sensor and arduino uno for coding purpose to make a self braking car whenever it detects a object in a close proximity.",
+    // "Gas Agency System is a web-based application developed using C# and vb.net, that allows users to book gas cylinders. It also allows the admin to manage the gas cylinders, bookings and reciepts.",
   ];
 
   static const List<String> links = [
-    // "https://pub.dev/packages/awesome_snackbar_content",
-    // "https://github.com/mhmzdev/The_Holy_Quran_App",
-    // "https://github.com/mhmzdev/MedKit-Pharmacy-App-Using-Flutter",
     "https://github.com/rathod009/GPI-App-Gear-Care",
-    // "https://github.com/mhmzdev/Covid19-Tracker-App",
-    // "https://github.com/mhmzdev/Messenger-Chat-Head-Flutter-UI",
-    // "https://github.com/mhmzdev/flutter.dev-Flutter-Web-Clone",
-    // "https://github.com/mhmzdev/Earbender_Music_App",
-    // "https://github.com/mhmzdev/FTP_GUI_Java",
-    // "https://github.com/mhmzdev/My-Order-Resturant-Ordering-System",
-    // "https://github.com/mhmzdev/Hidev_Web",
+    "https://github.com/rathod009/Vehicle-Booking-System",
+    "https://github.com/rathod009/Eye-Gaze-Estimation-Through-Webcam",
+    // "https://github.com/rathod009/Expense-Tracking-App",
+    // "https://github.com/rathod009/Airline-Data-Analytics",
+    // "https://github.com/rathod009/Smart-Breaking-System",
+    // "https://github.com/rathod009/Gas-Agency-System",
   ];
 }

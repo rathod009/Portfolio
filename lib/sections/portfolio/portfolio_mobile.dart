@@ -43,8 +43,7 @@ class PortfolioMobileTab extends StatelessWidget {
             enableInfiniteScroll: false,
           ),
         ),
-        Space.y!,
-        Space.y!,
+        Space.y1!,
         SizedBox(
           height: AppDimensions.normalize(16),
           width: AppDimensions.normalize(50),

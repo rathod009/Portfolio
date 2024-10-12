@@ -29,7 +29,7 @@ class _MobileDrawer extends StatelessWidget {
                   color: AppTheme.c!.primary!,
                 ),
                 title: Text(
-                  "Dark Mode",
+                  "Animate",
                   style: TextStyle(color: textColor),
                 ),
                 trailing: Switch(
