@@ -80,6 +80,16 @@ class HomeMobile extends StatelessWidget {
                           textStyle: AppText.b1,
                         ),
                         TyperAnimatedText(
+                          ' Frontend Developer',
+                          speed: const Duration(milliseconds: 50),
+                          textStyle: AppText.b1,
+                        ),
+                        TyperAnimatedText(
+                          ' Python Developer',
+                          speed: const Duration(milliseconds: 50),
+                          textStyle: AppText.b1,
+                        ),
+                        TyperAnimatedText(
                           ' UI/UX Enthusiast',
                           speed: const Duration(milliseconds: 50),
                           textStyle: AppText.b1,
