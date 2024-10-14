@@ -14,7 +14,7 @@ class ScrollProvider extends ChangeNotifier {
             : index == 3
                 ? 247
                 : index == 4
-                  ? 260
+                  ? 252
                   : 235;
     controller.animateTo(
       AppDimensions.normalize(
