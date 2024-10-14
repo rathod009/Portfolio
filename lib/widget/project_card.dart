@@ -21,6 +21,7 @@ class ProjectCard extends StatefulWidget {
     required this.projectTitle,
     required this.projectDescription,
   });
+
   @override
   ProjectCardState createState() => ProjectCardState();
 }
@@ -31,8 +32,6 @@ class ProjectCardState extends State<ProjectCard> {
   @override
   Widget build(BuildContext context) {
     final appProvider = Provider.of<AppProvider>(context);
-
-    double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
 
     return InkWell(
@@ -41,118 +40,87 @@ class ProjectCardState extends State<ProjectCard> {
       highlightColor: Colors.transparent,
       onTap: widget.projectLink == null
           ? () {}
-          : () => openURL(
-                widget.projectLink!,
-              ),
+          : () => openURL(widget.projectLink!),
       onHover: (isHovering) {
-        if (isHovering) {
-          setState(() {
-            isHover = true;
-          });
-        } else {
-          setState(() {
-            isHover = false;
-          });
-        }
+        setState(() {
+          isHover = isHovering;
+        });
       },
       child: Container(
         margin: Space.h,
         padding: Space.all(),
         width: AppDimensions.normalize(150),
-        height: AppDimensions.normalize(90),
         decoration: BoxDecoration(
           color: appProvider.isDark ? Colors.grey[200] : Colors.white,
           borderRadius: BorderRadius.circular(10),
-          boxShadow: isHover
-              ? [
-                  BoxShadow(
-                    color: Colors.cyanAccent.withAlpha(100),
-                    blurRadius: 12.0,
-                    offset: const Offset(0.0, 0.0),
-                  )
-                ]
-              : [
-                  BoxShadow(
-                    color: AppTheme.c!.primary!.withAlpha(100),
-                    blurRadius: 12.0,
-                    offset: const Offset(0.0, 0.0),
-                  )
-                ],
+          boxShadow: [
+            BoxShadow(
+              color: (isHover ? Colors.cyanAccent : AppTheme.c!.primary)!
+                  .withAlpha(100),
+              blurRadius: 12.0,
+              offset: const Offset(0.0, 0.0),
+            ),
+          ],
         ),
         child: Stack(
-          fit: StackFit.expand,
           children: [
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                widget.projectIcon != null
-                    ? (width > 1135 || width < 950)
-                        ? Image.asset(
-                            widget.projectIcon!,
-                            height: height * 0.05,
-                          )
-                        : Row(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              Image.asset(
-                                widget.projectIcon!,
-                                height: height * 0.03,
-                              ),
-                              SizedBox(
-                                width: width * 0.01,
-                              ),
-                              Text(
-                                widget.projectTitle,
-                                style: AppText.b2b,
-                                textAlign: TextAlign.center,
-                              ),
-                            ],
-                          )
-                    : Container(),
-                widget.projectIconData != null
-                    ? Icon(
+            // Banner Image with Fade Animation
+            if (widget.banner != null)
+              ClipRRect(
+                borderRadius: BorderRadius.circular(5),
+                child: AnimatedOpacity(
+                  duration: const Duration(milliseconds: 300),
+                  opacity: isHover ? 0.0 : 1.0, // Fade effect on hover
+                  child: Image.network(
+                    widget.banner!,
+                    height: height * 0.30,
+                    width: double.infinity,
+                    fit: BoxFit.contain,
+                  ),
+                ),
+              ),
+            // Content Overlay on Hover
+            AnimatedOpacity(
+              duration: const Duration(milliseconds: 300),
+              opacity: isHover ? 1.0 : 0.0, // Show content only on hover
+              child: Container(
+                height: height * 0.32,
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(5),
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisSize: MainAxisSize.min, // Added to minimize space
+                  children: [
+                    if (widget.projectIcon != null)
+                      Image.asset(
+                        widget.projectIcon!,
+                        height: height * 0.04,
+                      ),
+                    if (widget.projectIconData != null)
+                      Icon(
                         widget.projectIconData,
                         color: AppTheme.c!.primary!,
                         size: height * 0.1,
-                      )
-                    : Container(),
-                (width > 1135 || width < 950)
-                    ? SizedBox(
-                        height: height * 0.02,
-                      )
-                    : const SizedBox(),
-                (width > 1135 || width < 950)
-                    ? Text(
-                        widget.projectTitle,
-                        style: AppText.b2b,
-                        textAlign: TextAlign.center,
-                      )
-                    : Container(),
-                SizedBox(
-                  height: height * 0.01,
+                      ),
+                    Text(
+                      widget.projectTitle,
+                      style: AppText.b2b?.copyWith(color: Colors.black),
+                      textAlign: TextAlign.center,
+                    ),
+                    SizedBox(height: 4.0), // Adjust this value to reduce/increase space
+                    Text(
+                      widget.projectDescription,
+                      textAlign: TextAlign.center,
+                      style: AppText.b2?.copyWith(
+                        color: Colors.black,
+                        fontSize: 12.0,
+                      ),
+                    ),
+                  ],
                 ),
-                Text(
-                  widget.projectDescription,
-                  textAlign: TextAlign.center,
-                  style: AppText.b2b?.copyWith(
-                    fontSize: 12.0, // Adjust the font size as per your requirement
-                  ),
-                ),
-                SizedBox(
-                  height: height * 0.01,
-                ),
-              ],
-            ),
-            AnimatedOpacity(
-              duration: const Duration(milliseconds: 400),
-              opacity: isHover ? 0.0 : 1.0,
-              child: FittedBox(
-                fit: BoxFit.contain,
-                child: widget.banner != null
-                    ? Image.asset(
-                        widget.banner!,
-                      )
-                    : Container(),
               ),
             ),
           ],
@@ -161,3 +129,122 @@ class ProjectCardState extends State<ProjectCard> {
     );
   }
 }
+
+
+
+// ------------------ OLD ---------------------
+// import 'package:flutter/material.dart';
+// import 'package:portfolio/configs/configs.dart';
+// import 'package:portfolio/constants.dart';
+// import 'package:portfolio/provider/app_provider.dart';
+// import 'package:provider/provider.dart';
+
+// class ProjectCard extends StatefulWidget {
+//   final String? banner;
+//   final String? projectLink;
+//   final String? projectIcon;
+//   final String projectTitle;
+//   final String projectDescription;
+//   final IconData? projectIconData;
+
+//   const ProjectCard({
+//     super.key,
+//     this.banner,
+//     this.projectIcon,
+//     this.projectLink,
+//     this.projectIconData,
+//     required this.projectTitle,
+//     required this.projectDescription,
+//   });
+
+//   @override
+//   ProjectCardState createState() => ProjectCardState();
+// }
+
+// class ProjectCardState extends State<ProjectCard> {
+//   bool isHover = false;
+
+//   @override
+//   Widget build(BuildContext context) {
+//     final appProvider = Provider.of<AppProvider>(context);
+//     double width = MediaQuery.of(context).size.width;
+//     double height = MediaQuery.of(context).size.height;
+
+//     return InkWell(
+//       hoverColor: Colors.transparent,
+//       splashColor: Colors.transparent,
+//       highlightColor: Colors.transparent,
+//       onTap: widget.projectLink == null
+//           ? () {}
+//           : () => openURL(widget.projectLink!),
+//       onHover: (isHovering) {
+//         setState(() {
+//           isHover = isHovering;
+//         });
+//       },
+//       child: Container(
+//         margin: Space.h,
+//         padding: Space.all(),
+//         width: AppDimensions.normalize(150),
+//         decoration: BoxDecoration(
+//           color: appProvider.isDark ? Colors.grey[200] : Colors.white,
+//           borderRadius: BorderRadius.circular(10),
+//           boxShadow: [
+//             BoxShadow(
+//               color: (isHover ? Colors.cyanAccent : AppTheme.c!.primary)!
+//                   .withAlpha(100),
+//               blurRadius: 12.0,
+//               offset: const Offset(0.0, 0.0),
+//             ),
+//           ],
+//         ),
+//         child: Column(
+//           mainAxisSize: MainAxisSize.min,
+//           children: [
+//             if (widget.banner != null)
+//               ClipRRect(
+//                 borderRadius: BorderRadius.circular(10),
+//                 child: Image.network(
+//                   widget.banner!,
+//                   height: height * 0.2,
+//                   width: double.infinity,
+//                   fit: BoxFit.cover,
+//                 ),
+//               ),
+//             const SizedBox(height: 8),
+//             if (widget.projectIcon != null)
+//               Image.asset(
+//                 widget.projectIcon!,
+//                 height: height * 0.05,
+//               ),
+//             if (widget.projectIconData != null)
+//               Icon(
+//                 widget.projectIconData,
+//                 color: AppTheme.c!.primary!,
+//                 size: height * 0.1,
+//               ),
+//             const SizedBox(height: 8),
+//             Text(
+//               widget.projectTitle,
+//               style: AppText.b2,
+//               textAlign: TextAlign.center,
+//             ),
+//             const SizedBox(height: 8),
+//             Flexible(
+//               child: Wrap(
+//                 alignment: WrapAlignment.center,
+//                 children: [
+//                   Text(
+//                     widget.projectDescription,
+//                     textAlign: TextAlign.center,
+//                     style: AppText.b2?.copyWith(fontSize: 11.0),
+//                   ),
+//                 ],
+//               ),
+//             ),
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+// }

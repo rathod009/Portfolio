@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/configs/app_dimensions.dart';
 import 'package:portfolio/utils/contact_utils.dart';
 import 'package:portfolio/widget/custom_text_heading.dart';
-import 'package:portfolio/widget/project_card.dart';
+import 'package:portfolio/widget/contact_card.dart';
 
 class ContactMobileTab extends StatelessWidget {
   const ContactMobileTab({super.key});
@@ -19,17 +19,17 @@ class ContactMobileTab extends StatelessWidget {
           text: "Let's build something together :)\n\n",
         ),
         CarouselSlider.builder(
-          itemCount: 3,
+          itemCount: ContactUtils.contactIcon.length, // Adjust for the number of items
           itemBuilder: (BuildContext context, int itemIndex, int i) => Padding(
             padding: const EdgeInsets.symmetric(vertical: 10.0),
-            child: ProjectCard(
-              projectIconData: ContactUtils.contactIcon[i],
-              projectTitle: ContactUtils.titles[i],
-              projectDescription: ContactUtils.details[i],
+            child: ContactCard(
+              contactIconData: ContactUtils.contactIcon[i],
+              contactTitle: ContactUtils.titles[i],
+              contactDescription: ContactUtils.details[i],
             ),
           ),
           options: CarouselOptions(
-            height: AppDimensions.normalize(90),
+            height: AppDimensions.normalize(120), // Match height with desktop
             autoPlay: true,
             autoPlayInterval: const Duration(seconds: 5),
             enlargeCenterPage: true,

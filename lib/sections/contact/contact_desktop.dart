@@ -3,7 +3,7 @@ import 'package:portfolio/animations/bottom_animation.dart';
 import 'package:portfolio/configs/configs.dart';
 import 'package:portfolio/utils/contact_utils.dart';
 import 'package:portfolio/widget/custom_text_heading.dart';
-import 'package:portfolio/widget/project_card.dart';
+import 'package:portfolio/widget/contact_card.dart';
 
 class ContactDesktop extends StatelessWidget {
   const ContactDesktop({super.key});
@@ -11,7 +11,7 @@ class ContactDesktop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: Space.all(1, 1),
+      padding: Space.all(1, 1), // Consistent padding
       child: Column(
         children: [
           const CustomSectionHeading(
@@ -22,19 +22,21 @@ class ContactDesktop extends StatelessWidget {
           ),
           Space.y!,
           Wrap(
-              alignment: WrapAlignment.center,
-              runSpacing: AppDimensions.normalize(10),
-              children: ContactUtils.contactIcon
-                  .asMap()
-                  .entries
-                  .map((e) => WidgetAnimator(
-                        child: ProjectCard(
-                          projectIconData: e.value,
-                          projectTitle: ContactUtils.titles[e.key],
-                          projectDescription: ContactUtils.details[e.key],
-                        ),
-                      ))
-                  .toList()),
+            alignment: WrapAlignment.center,
+            spacing: AppDimensions.normalize(16), // Add spacing between cards
+            runSpacing: AppDimensions.normalize(10),
+            children: ContactUtils.contactIcon
+                .asMap()
+                .entries
+                .map((e) => WidgetAnimator(
+                      child: ContactCard(
+                        contactIconData: e.value,
+                        contactTitle: ContactUtils.titles[e.key],
+                        contactDescription: ContactUtils.details[e.key],
+                      ),
+                    ))
+                .toList(),
+          ),
         ],
       ),
     );
