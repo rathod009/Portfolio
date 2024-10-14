@@ -64,36 +64,24 @@ class ProjectCardState extends State<ProjectCard> {
         ),
         child: Stack(
           children: [
-            // FadeInImage implementation as an alternative to Image.network
-            // if (widget.banner != null)
-            //   ClipRRect(
-            //     borderRadius: BorderRadius.circular(5),
-            //     child: FadeInImage.assetNetwork(
-            //       placeholder: 'assets/projects/placeholder.gif',
-            //       image: widget.banner!,
-            //       height: height * 0.26,
-            //       width: double.infinity,
-            //       fit: BoxFit.contain,
-            //       imageErrorBuilder: (context, error, stackTrace) {
-            //         return Icon(
-            //           Icons.broken_image,
-            //           size: height * 0.1,
-            //         ); // Gracefully handle loading error
-            //       },
-            //     ),
-            //   ),
-
+            // Use Image.asset to load local images from assets/projects/
             if (widget.banner != null)
               ClipRRect(
                 borderRadius: BorderRadius.circular(5),
                 child: AnimatedOpacity(
                   duration: const Duration(milliseconds: 300),
                   opacity: isHover ? 0.0 : 1.0, // Fade effect on hover
-                  child: Image.network(
-                    widget.banner!,
+                  child: Image.asset(
+                    widget.banner!, // Load local asset
                     height: height * 0.26,
                     width: double.infinity,
                     fit: BoxFit.contain,
+                    errorBuilder: (context, error, stackTrace) {
+                      return Icon(
+                        Icons.broken_image,
+                        size: height * 0.1,
+                      ); // Gracefully handle loading error
+                    },
                   ),
                 ),
               ),
@@ -111,7 +99,7 @@ class ProjectCardState extends State<ProjectCard> {
                 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  mainAxisSize: MainAxisSize.min, // Added to minimize space
+                  mainAxisSize: MainAxisSize.min, // Minimize space
                   children: [
                     if (widget.projectIcon != null)
                       Image.asset(
@@ -129,7 +117,7 @@ class ProjectCardState extends State<ProjectCard> {
                       style: AppText.b2b?.copyWith(color: Colors.black),
                       textAlign: TextAlign.center,
                     ),
-                    SizedBox(height: 4.0),
+                    SizedBox(height: 4.0), // Adjust spacing if needed
                     Text(
                       widget.projectDescription,
                       textAlign: TextAlign.center,
@@ -148,8 +136,6 @@ class ProjectCardState extends State<ProjectCard> {
     );
   }
 }
-
-
 
 
 // ------------------ OLD ---------------------
