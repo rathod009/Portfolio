@@ -3,6 +3,7 @@ import 'package:portfolio/configs/configs.dart';
 import 'package:portfolio/constants.dart';
 import 'package:portfolio/provider/app_provider.dart';
 import 'package:provider/provider.dart';
+
 class ProjectCard extends StatefulWidget {
   final String? banner;
   final String? projectLink;
@@ -63,7 +64,26 @@ class ProjectCardState extends State<ProjectCard> {
         ),
         child: Stack(
           children: [
-            // Banner Image with Fade Animation
+            // FadeInImage implementation as an alternative to Image.network
+            if (widget.banner != null)
+              ClipRRect(
+                borderRadius: BorderRadius.circular(5),
+                child: FadeInImage.assetNetwork(
+                  placeholder: 'assets/projects/placeholder.gif',
+                  image: widget.banner!,
+                  height: height * 0.26,
+                  width: double.infinity,
+                  fit: BoxFit.contain,
+                  imageErrorBuilder: (context, error, stackTrace) {
+                    return Icon(
+                      Icons.broken_image,
+                      size: height * 0.1,
+                    ); // Gracefully handle loading error
+                  },
+                ),
+              ),
+
+            // Original Image.network code (if needed to revert)
             if (widget.banner != null)
               ClipRRect(
                 borderRadius: BorderRadius.circular(5),
@@ -78,6 +98,7 @@ class ProjectCardState extends State<ProjectCard> {
                   ),
                 ),
               ),
+
             // Content Overlay on Hover
             AnimatedOpacity(
               duration: const Duration(milliseconds: 300),
@@ -128,6 +149,7 @@ class ProjectCardState extends State<ProjectCard> {
     );
   }
 }
+
 
 
 
