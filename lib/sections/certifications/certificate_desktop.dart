@@ -32,7 +32,7 @@ class _CertificateDesktopState extends State<CertificateDesktop> {
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 4, // 4 items per row
               mainAxisSpacing: 0.0, // Spacing between rows
-              crossAxisSpacing: 14.0, // Spacing between columns
+              crossAxisSpacing: 10.0, // Spacing between columns
               childAspectRatio: 1.74, // Adjust for card proportions
             ),
             itemCount: CertificationsUtils.certificates.length,

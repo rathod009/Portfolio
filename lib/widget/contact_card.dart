@@ -43,13 +43,13 @@ class ContactCard extends StatelessWidget {
           if (contactIcon != null)
             Image.asset(
               contactIcon!,
-              height: AppDimensions.normalize(30),
+              height: AppDimensions.normalize(20),
             ),
           if (contactIconData != null)
             Icon(
               contactIconData,
               color: AppTheme.c!.primary!,
-              size: AppDimensions.normalize(30),
+              size: AppDimensions.normalize(20),
             ),
           SizedBox(height: 8.0),
           Text(
