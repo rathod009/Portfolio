@@ -47,7 +47,7 @@ class _ServiceCardState extends State<_ServiceCard> {
         flipOnTouch: kIsWeb ? false : true,
         key: cardKey,
         back: Container(
-          width: AppDimensions.normalize(100),
+          width: AppDimensions.normalize(125),
           height: AppDimensions.normalize(80),
           padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 12.0),
           decoration: BoxDecoration(
@@ -75,7 +75,7 @@ class _ServiceCardState extends State<_ServiceCard> {
           ),
         ),
         front: Container(
-          width: AppDimensions.normalize(100),
+          width: AppDimensions.normalize(125),
           height: AppDimensions.normalize(80),
           padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 12.0),
           decoration: BoxDecoration(

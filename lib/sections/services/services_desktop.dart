@@ -16,7 +16,7 @@ class ServiceDesktopState extends State<ServiceDesktop> {
     double width = MediaQuery.of(context).size.width;
 
     return Container(
-      padding: Space.hf(4),
+      padding: Space.hf(0.5),
       child: Column(
         children: [
           const CustomSectionHeading(
@@ -27,9 +27,9 @@ class ServiceDesktopState extends State<ServiceDesktop> {
           ),
           Space.y!,
           Wrap(
-            spacing: width * 0.05,
-            runSpacing: height * 0.05,
-            alignment: WrapAlignment.center,
+            spacing: width * 0.02,
+            runSpacing: height * 0.03,
+            alignment: WrapAlignment.spaceAround,
             crossAxisAlignment: WrapCrossAlignment.center,
             children: ServicesUtils.servicesIcons
                 .asMap()
