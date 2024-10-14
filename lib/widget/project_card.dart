@@ -3,7 +3,6 @@ import 'package:portfolio/configs/configs.dart';
 import 'package:portfolio/constants.dart';
 import 'package:portfolio/provider/app_provider.dart';
 import 'package:provider/provider.dart';
-
 class ProjectCard extends StatefulWidget {
   final String? banner;
   final String? projectLink;
@@ -49,7 +48,7 @@ class ProjectCardState extends State<ProjectCard> {
       child: Container(
         margin: Space.h,
         padding: Space.all(),
-        width: AppDimensions.normalize(150),
+        width: AppDimensions.normalize(130),
         decoration: BoxDecoration(
           color: appProvider.isDark ? Colors.grey[200] : Colors.white,
           borderRadius: BorderRadius.circular(10),
@@ -73,7 +72,7 @@ class ProjectCardState extends State<ProjectCard> {
                   opacity: isHover ? 0.0 : 1.0, // Fade effect on hover
                   child: Image.network(
                     widget.banner!,
-                    height: height * 0.30,
+                    height: height * 0.26,
                     width: double.infinity,
                     fit: BoxFit.contain,
                   ),
@@ -84,7 +83,7 @@ class ProjectCardState extends State<ProjectCard> {
               duration: const Duration(milliseconds: 300),
               opacity: isHover ? 1.0 : 0.0, // Show content only on hover
               child: Container(
-                height: height * 0.32,
+                height: height * 0.28,
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
                   color: Colors.white,

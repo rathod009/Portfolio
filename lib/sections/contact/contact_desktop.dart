@@ -11,7 +11,7 @@ class ContactDesktop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: Space.all(1, 1), // Consistent padding
+      padding: Space.all(1,1), // Consistent padding
       child: Column(
         children: [
           const CustomSectionHeading(
@@ -23,7 +23,7 @@ class ContactDesktop extends StatelessWidget {
           Space.y!,
           Wrap(
             alignment: WrapAlignment.center,
-            spacing: AppDimensions.normalize(16), // Add spacing between cards
+            spacing: AppDimensions.normalize(10), // Add spacing between cards
             runSpacing: AppDimensions.normalize(10),
             children: ContactUtils.contactIcon
                 .asMap()

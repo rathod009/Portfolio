@@ -23,7 +23,7 @@ class ContactCard extends StatelessWidget {
 
     return Container(
       margin: Space.v,
-      padding: EdgeInsets.zero,
+      padding: EdgeInsets.fromLTRB(0, 20, 0, 20),
       width: AppDimensions.normalize(100),
       decoration: BoxDecoration(
         color: appProvider.isDark ? Colors.grey[200] : Colors.white,
@@ -43,15 +43,15 @@ class ContactCard extends StatelessWidget {
           if (contactIcon != null)
             Image.asset(
               contactIcon!,
-              height: AppDimensions.normalize(40),
+              height: AppDimensions.normalize(30),
             ),
           if (contactIconData != null)
             Icon(
               contactIconData,
               color: AppTheme.c!.primary!,
-              size: AppDimensions.normalize(40),
+              size: AppDimensions.normalize(30),
             ),
-          SizedBox(height: 16.0),
+          SizedBox(height: 8.0),
           Text(
             contactTitle,
             style: AppText.b2b?.copyWith(color: Colors.black),
