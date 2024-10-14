@@ -12,9 +12,9 @@ class ScrollProvider extends ChangeNotifier {
         : index == 2
             ? 250
             : index == 3
-                ? 255
+                ? 275
                 : index == 4
-                  ? 260
+                  ? 280
                   : index == 5
                     ? 240
                     : 235;
