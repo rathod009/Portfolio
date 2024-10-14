@@ -65,25 +65,24 @@ class ProjectCardState extends State<ProjectCard> {
         child: Stack(
           children: [
             // FadeInImage implementation as an alternative to Image.network
-            if (widget.banner != null)
-              ClipRRect(
-                borderRadius: BorderRadius.circular(5),
-                child: FadeInImage.assetNetwork(
-                  placeholder: 'assets/projects/placeholder.gif',
-                  image: widget.banner!,
-                  height: height * 0.26,
-                  width: double.infinity,
-                  fit: BoxFit.contain,
-                  imageErrorBuilder: (context, error, stackTrace) {
-                    return Icon(
-                      Icons.broken_image,
-                      size: height * 0.1,
-                    ); // Gracefully handle loading error
-                  },
-                ),
-              ),
+            // if (widget.banner != null)
+            //   ClipRRect(
+            //     borderRadius: BorderRadius.circular(5),
+            //     child: FadeInImage.assetNetwork(
+            //       placeholder: 'assets/projects/placeholder.gif',
+            //       image: widget.banner!,
+            //       height: height * 0.26,
+            //       width: double.infinity,
+            //       fit: BoxFit.contain,
+            //       imageErrorBuilder: (context, error, stackTrace) {
+            //         return Icon(
+            //           Icons.broken_image,
+            //           size: height * 0.1,
+            //         ); // Gracefully handle loading error
+            //       },
+            //     ),
+            //   ),
 
-            // Original Image.network code (if needed to revert)
             if (widget.banner != null)
               ClipRRect(
                 borderRadius: BorderRadius.circular(5),
@@ -130,7 +129,7 @@ class ProjectCardState extends State<ProjectCard> {
                       style: AppText.b2b?.copyWith(color: Colors.black),
                       textAlign: TextAlign.center,
                     ),
-                    SizedBox(height: 4.0), // Adjust this value to reduce/increase space
+                    SizedBox(height: 4.0),
                     Text(
                       widget.projectDescription,
                       textAlign: TextAlign.center,
