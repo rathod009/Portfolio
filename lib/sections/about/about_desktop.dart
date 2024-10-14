@@ -30,7 +30,7 @@ class AboutDesktop extends StatelessWidget {
           const CustomSectionSubHeading(
             text: 'Get to know me :)',
           ),
-          Space.y1!,
+          Space.y!,
           Row(
             children: [
               Expanded(

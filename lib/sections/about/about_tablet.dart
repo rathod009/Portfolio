@@ -34,7 +34,7 @@ class AboutTab extends StatelessWidget {
               text: 'Get to know me :)',
             ),
           ),
-          Space.y1!,
+          Space.y!,
           Image.asset(
             StaticUtils.coloredPhoto,
             height: height * 0.40,
