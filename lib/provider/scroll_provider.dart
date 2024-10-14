@@ -8,7 +8,7 @@ class ScrollProvider extends ChangeNotifier {
 
   scroll(int index) {
     double offset = index == 1
-        ? 265
+        ? 270
         : index == 2
             ? 250
             : index == 3
