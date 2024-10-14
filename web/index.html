@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <base href="/">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="A Selft taught flutter developer, technical writer and open source contributor.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Portfolio">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+
+  <title>Bhumik Rathod - Portfolio</title>
+  <link rel="manifest" href="manifest.json">
+
+  <style>
+    .container {
+      height: 100%;
+    }
+
+    .center {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+
+    /* Jarvis-like loading animation */
+    .loading-circle {
+      position: relative;
+      width: 100px;
+      height: 100px;
+    }
+
+    .loading-circle div {
+      position: absolute;
+      border: 2px solid transparent;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    .loading-circle div:nth-child(1) {
+      border-top-color: #e64230;
+      width: 100px;
+      height: 100px;
+      top: 0px;
+      left: 0px;
+      animation-duration: 1.5s;
+    }
+
+    .loading-circle div:nth-child(2) {
+      border-top-color: #f39c12;
+      width: 80px;
+      height: 80px;
+      top: 10px;
+      left: 10px;
+      animation-duration: 1.25s;
+    }
+
+    .loading-circle div:nth-child(3) {
+      border-top-color: #2980b9;
+      width: 60px;
+      height: 60px;
+      top: 20px;
+      left: 20px;
+      animation-duration: 1s;
+    }
+
+    .loading-circle div:nth-child(4) {
+      border-top-color: #27ae60;
+      width: 40px;
+      height: 40px;
+      top: 30px;
+      left: 30px;
+      animation-duration: 0.75s;
+    }
+
+    .loading-circle div:nth-child(5) {
+      border-top-color: #c62da0;
+      width: 20px;
+      height: 20px;
+      top: 40px;
+      left: 40px;
+      animation-duration: 0.5s;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      background-color: transparent;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="loading-container" class="container">
+    <div class="center">
+      <div class="loading-circle">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add the flutter.js script -->
+  <script src="flutter.js" defer></script>
+  <script src="main.dart.js" type="application/javascript"></script>
+</body>
+
+</html>
