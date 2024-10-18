@@ -47,9 +47,10 @@ class ProjectCardState extends State<ProjectCard> {
         });
       },
       child: Container(
-        margin: Space.h,
+        margin: Space.v,
         padding: Space.all(),
         width: AppDimensions.normalize(130),
+        height: AppDimensions.normalize(88),
         decoration: BoxDecoration(
           color: appProvider.isDark ? Colors.grey[200] : Colors.white,
           borderRadius: BorderRadius.circular(10),

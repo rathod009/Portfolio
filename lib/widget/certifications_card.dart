@@ -22,6 +22,7 @@ class CertificateCardState extends State<CertificateCard> with SingleTickerProvi
   bool isFront = true;  // This will toggle between front and back sides
   late AnimationController _controller;
   late Animation<double> _animation;
+  bool isHover = false;
 
   @override
   void initState() {
@@ -90,7 +91,8 @@ class CertificateCardState extends State<CertificateCard> with SingleTickerProvi
         borderRadius: BorderRadius.circular(10),
         boxShadow: [
           BoxShadow(
-            color: AppTheme.c!.primary!.withAlpha(100),
+            color: (isHover ? Colors.cyanAccent : AppTheme.c!.primary)!
+                  .withAlpha(100),
             blurRadius: 12.0,
             offset: const Offset(0.0, 0.0),
           )
@@ -135,3 +137,4 @@ class CertificateCardState extends State<CertificateCard> with SingleTickerProvi
     );
   }
 }
+

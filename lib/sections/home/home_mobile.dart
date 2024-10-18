@@ -12,7 +12,7 @@ class HomeMobile extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
 
     return SizedBox(
-      height: size.height * 0.88,
+      height: size.height * 0.90,
       child: Stack(
         children: [
           Positioned(

@@ -33,7 +33,7 @@ class ScrollProvider extends ChangeNotifier {
     double offset = index == 0
         ? 0.0 * screenHeight
         : index == 1
-            ? 0.33 * screenHeight
+            ? 0.37 * screenHeight
             : index == 2
                 ? 0.68 * screenHeight
                 : index == 3
