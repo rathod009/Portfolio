@@ -49,7 +49,7 @@ class _ServiceCardState extends State<_ServiceCard> {
         back: Container(
           width: AppDimensions.normalize(125),
           height: AppDimensions.normalize(75),
-          padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 12.0),
+          padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 8.0),
           decoration: BoxDecoration(
             color: appProvider.isDark ? Colors.grey[200] : Colors.white,
             borderRadius: BorderRadius.circular(15),
@@ -77,7 +77,7 @@ class _ServiceCardState extends State<_ServiceCard> {
         front: Container(
           width: AppDimensions.normalize(125),
           height: AppDimensions.normalize(75),
-          padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 12.0),
+          padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 8.0),
           decoration: BoxDecoration(
             color: appProvider.isDark ? Colors.grey[200] : Colors.white,
             borderRadius: BorderRadius.circular(15),

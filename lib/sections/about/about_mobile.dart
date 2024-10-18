@@ -27,8 +27,8 @@ class AboutMobile extends StatelessWidget {
           ClipOval(
             child: Image.asset(
               StaticUtils.mobilePhoto,
-              height: height * 0.30,
-              width: height * 0.30,
+              height: height * 0.27,
+              width: height * 0.27,
               fit: BoxFit.cover,
             ),
           ),
@@ -39,7 +39,7 @@ class AboutMobile extends StatelessWidget {
                 color: AppTheme.c!.primary,
               ),
             ),
-          Space.y1!,
+          Space.y!,
           Text(
             AboutUtils.aboutMeHeadline,
             style: AppText.b2b!.copyWith(
@@ -54,8 +54,8 @@ class AboutMobile extends StatelessWidget {
               child: Text(
               AboutUtils.aboutMeDetail,
               style: AppText.l1!.copyWith(
-                height: 2,
-                letterSpacing: 0.6,
+                height: 1.5,
+                letterSpacing: 0.5,
                 fontFamily: 'Montserrat',
               ),
             ),
@@ -89,7 +89,7 @@ class AboutMobile extends StatelessWidget {
           ),
           Space.y!,
           const SparkleOutlinedButton(), // Use the new widget
-          Space.y1!,
+          Space.y!,
           Wrap(
               alignment: WrapAlignment.spaceEvenly,
               crossAxisAlignment: WrapCrossAlignment.center,
