@@ -87,9 +87,9 @@ class AboutMobile extends StatelessWidget {
             color: Colors.grey[800],
             thickness: AppDimensions.normalize(0.5),
           ),
-          Space.y1!,
+          Space.y!,
           const SparkleOutlinedButton(), // Use the new widget
-          Space.y2!,
+          Space.y1!,
           Wrap(
               alignment: WrapAlignment.spaceEvenly,
               crossAxisAlignment: WrapCrossAlignment.center,
