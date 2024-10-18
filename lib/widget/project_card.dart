@@ -74,7 +74,7 @@ class ProjectCardState extends State<ProjectCard> {
                   opacity: isHover ? 0.0 : 1.0, // Fade effect on hover
                   child: Image.asset(
                     widget.banner!, // Load local asset
-                    height: height * 0.26,
+                    height: height * 0.28,
                     width: double.infinity,
                     fit: BoxFit.contain,
                     errorBuilder: (context, error, stackTrace) {

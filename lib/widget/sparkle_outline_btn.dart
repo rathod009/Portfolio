@@ -78,7 +78,7 @@ class _SparkleOutlinedButtonState extends State<SparkleOutlinedButton>
                 child: OutlinedButton(
                   style: OutlinedButton.styleFrom(
                     padding: const EdgeInsets.symmetric(
-                        vertical: 8, horizontal: 120),
+                        vertical: 8, horizontal: 110),
                     side: const BorderSide(color: Colors.transparent),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8),
