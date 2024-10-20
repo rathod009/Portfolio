@@ -13,6 +13,12 @@ class PortfolioMobileTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
+
+    // Adjust height and width based on screen size
+    double cardHeight = height * 0.31; // Dynamically set height for mobile view
+    double cardWidth = width * 0.8; // Ensure it fits the screen width
+
     return Column(
       children: [
         const CustomSectionHeading(
@@ -23,8 +29,9 @@ class PortfolioMobileTab extends StatelessWidget {
         ),
         CarouselSlider.builder(
           itemCount: ProjectUtils.titles.length,
-          itemBuilder: (BuildContext context, int itemIndex, int i) => Padding(
-            padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 0),
+          itemBuilder: (BuildContext context, int itemIndex, int i) => SizedBox(
+            width: cardWidth, // Apply responsive width
+            height: cardHeight, // Apply responsive height
             child: ProjectCard(
               banner: ProjectUtils.banners[i],
               projectIcon: ProjectUtils.icons[i],
@@ -34,13 +41,14 @@ class PortfolioMobileTab extends StatelessWidget {
             ),
           ),
           options: CarouselOptions(
-            height: height * 0.34,
+            height: cardHeight, // Set height for the slider
             autoPlay: true,
             autoPlayInterval: const Duration(seconds: 5),
             enlargeCenterPage: true,
             autoPlayCurve: Curves.fastOutSlowIn,
             autoPlayAnimationDuration: const Duration(milliseconds: 800),
             enableInfiniteScroll: false,
+            viewportFraction: 0.85, // Better fit for smaller screens
           ),
         ),
         Space.y1!,
@@ -54,7 +62,7 @@ class PortfolioMobileTab extends StatelessWidget {
               style: AppText.l1b,
             ),
           ),
-        )
+        ),
       ],
     );
   }

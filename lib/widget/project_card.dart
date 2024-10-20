@@ -47,10 +47,10 @@ class ProjectCardState extends State<ProjectCard> {
         });
       },
       child: Container(
-        margin: Space.v,
+        margin: Space.h,
         padding: Space.all(),
-        width: AppDimensions.normalize(130),
-        height: AppDimensions.normalize(88),
+        width: AppDimensions.normalize(40),
+        height: AppDimensions.normalize(10),
         decoration: BoxDecoration(
           color: appProvider.isDark ? Colors.grey[200] : Colors.white,
           borderRadius: BorderRadius.circular(10),
@@ -65,7 +65,6 @@ class ProjectCardState extends State<ProjectCard> {
         ),
         child: Stack(
           children: [
-            // Use Image.asset to load local images from assets/projects/
             if (widget.banner != null)
               ClipRRect(
                 borderRadius: BorderRadius.circular(5),
@@ -75,7 +74,7 @@ class ProjectCardState extends State<ProjectCard> {
                   child: Image.asset(
                     widget.banner!, // Load local asset
                     height: height * 0.28,
-                    width: double.infinity,
+                    width: double.maxFinite,
                     fit: BoxFit.contain,
                     errorBuilder: (context, error, stackTrace) {
                       return Icon(
@@ -119,12 +118,15 @@ class ProjectCardState extends State<ProjectCard> {
                       textAlign: TextAlign.center,
                     ),
                     SizedBox(height: 4.0), // Adjust spacing if needed
-                    Text(
-                      widget.projectDescription,
-                      textAlign: TextAlign.center,
-                      style: AppText.b2?.copyWith(
-                        color: Colors.black,
-                        fontSize: 12.0,
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 16),
+                      child: Text(
+                        widget.projectDescription,
+                        textAlign: TextAlign.center,
+                        style: AppText.b2?.copyWith(
+                          color: Colors.black,
+                          fontSize: 12.0,
+                        ),
                       ),
                     ),
                   ],

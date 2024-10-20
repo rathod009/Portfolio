@@ -19,19 +19,22 @@ class CertificateCard extends StatefulWidget {
 }
 
 class CertificateCardState extends State<CertificateCard> with SingleTickerProviderStateMixin {
-  bool isFront = true;  // This will toggle between front and back sides
+  bool isFront = true; // Track whether the front side is showing
   late AnimationController _controller;
   late Animation<double> _animation;
-  bool isHover = false;
+  bool isHover = false; // Track hover state for color change
 
   @override
   void initState() {
     super.initState();
     _controller = AnimationController(
       vsync: this,
-      duration: const Duration(milliseconds: 400),
+      duration: const Duration(milliseconds: 600), // Smoother flip animation
     );
-    _animation = Tween<double>(begin: 0, end: 1).animate(_controller);
+    _animation = Tween<double>(begin: 0, end: 1).animate(CurvedAnimation(
+      parent: _controller,
+      curve: Curves.easeInOut, // Smooth transition
+    ));
   }
 
   @override
@@ -58,23 +61,30 @@ class CertificateCardState extends State<CertificateCard> with SingleTickerProvi
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
 
-    return GestureDetector(
-      onTap: _toggleCard,
-      child: AnimatedBuilder(
-        animation: _controller,
-        builder: (context, child) {
-          return Transform(
-            alignment: Alignment.center,
-            transform: Matrix4.rotationY(_animation.value * pi),
-            child: _animation.value < 0.5
-                ? _buildFrontCard(appProvider, width, height)
-                : Transform(
-                    alignment: Alignment.center,
-                    transform: Matrix4.rotationY(pi),
-                    child: _buildBackCard(appProvider, width, height),
-                  ),
-          );
-        },
+    return MouseRegion(
+      onEnter: (_) => setState(() => isHover = true), // Detect hover enter
+      onExit: (_) => setState(() => isHover = false), // Detect hover exit
+      child: GestureDetector(
+        onTap: _toggleCard, // Handle card flip on tap
+        child: AnimatedBuilder(
+          animation: _controller,
+          builder: (context, child) {
+            final angle = _animation.value * pi; // Calculate rotation angle
+            final isFrontSide = angle <= pi / 2; // Check if front side is visible
+
+            return Transform(
+              alignment: Alignment.center,
+              transform: Matrix4.rotationY(angle),
+              child: isFrontSide
+                  ? _buildFrontCard(appProvider, width, height)
+                  : Transform(
+                      alignment: Alignment.center,
+                      transform: Matrix4.rotationY(pi), // Rotate back side
+                      child: _buildBackCard(appProvider, width, height),
+                    ),
+            );
+          },
+        ),
       ),
     );
   }
@@ -92,10 +102,10 @@ class CertificateCardState extends State<CertificateCard> with SingleTickerProvi
         boxShadow: [
           BoxShadow(
             color: (isHover ? Colors.cyanAccent : AppTheme.c!.primary)!
-                  .withAlpha(100),
+                .withAlpha(100),
             blurRadius: 12.0,
             offset: const Offset(0.0, 0.0),
-          )
+          ),
         ],
       ),
       child: FittedBox(
@@ -121,10 +131,11 @@ class CertificateCardState extends State<CertificateCard> with SingleTickerProvi
         borderRadius: BorderRadius.circular(10),
         boxShadow: [
           BoxShadow(
-            color: AppTheme.c!.primary!.withAlpha(100),
+            color: (isHover ? Colors.cyanAccent : AppTheme.c!.primary)!
+                .withAlpha(100),
             blurRadius: 12.0,
             offset: const Offset(0.0, 0.0),
-          )
+          ),
         ],
       ),
       child: Center(
@@ -137,4 +148,3 @@ class CertificateCardState extends State<CertificateCard> with SingleTickerProvi
     );
   }
 }
-

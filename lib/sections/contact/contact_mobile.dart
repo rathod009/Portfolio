@@ -21,7 +21,7 @@ class ContactMobileTab extends StatelessWidget {
         CarouselSlider.builder(
           itemCount: ContactUtils.contactIcon.length, // Adjust for the number of items
           itemBuilder: (BuildContext context, int itemIndex, int i) => Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8.0),
+            padding: const EdgeInsets.symmetric(horizontal: 0),
             child: ContactCard(
               contactIconData: ContactUtils.contactIcon[i],
               contactTitle: ContactUtils.titles[i],
@@ -29,7 +29,7 @@ class ContactMobileTab extends StatelessWidget {
             ),
           ),
           options: CarouselOptions(
-            height: AppDimensions.normalize(100),
+            height: AppDimensions.normalize(86),
             autoPlay: true,
             autoPlayInterval: const Duration(seconds: 5),
             enlargeCenterPage: true,

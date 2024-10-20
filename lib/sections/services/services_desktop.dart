@@ -16,14 +16,14 @@ class ServiceDesktopState extends State<ServiceDesktop> {
     double width = MediaQuery.of(context).size.width;
 
     return Container(
-      padding: Space.hf(0.5),
+      padding: EdgeInsets.symmetric(horizontal: 154),
       child: Column(
         children: [
           const CustomSectionHeading(
             text: '\nWhat I can do?',
           ),
           const CustomSectionSubHeading(
-            text: 'I may not be perfect but surely I\'m of some use :)\n\n',
+            text: 'I may not be perfect but surely I\'m of some use :)\n',
           ),
           Space.y!,
           Wrap(
@@ -38,8 +38,7 @@ class ServiceDesktopState extends State<ServiceDesktop> {
                   (e) => _ServiceCard(
                     serviceIcon: ServicesUtils.servicesIcons[e.key],
                     serviceTitle: ServicesUtils.servicesTitles[e.key],
-                    serviceDescription:
-                        ServicesUtils.servicesDescription[e.key],
+                    serviceDescription: ServicesUtils.servicesDescription[e.key],
                   ),
                 )
                 .toList(),

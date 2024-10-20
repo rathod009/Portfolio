@@ -26,22 +26,25 @@ class _CertificateDesktopState extends State<CertificateDesktop> {
           const CustomSectionSubHeading(
             text: "Here are some of the certifications I've earned to enhance my skills and knowledge :)\n",
           ),
-          GridView.builder(
-            shrinkWrap: true,
-            physics: const NeverScrollableScrollPhysics(), // To prevent inner scrolling
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 4, // 4 items per row
-              mainAxisSpacing: 10.0, // Spacing between rows
-              crossAxisSpacing: 20.0, // Spacing between columns
-              childAspectRatio: 1.54, // Adjust for card proportions
+          Padding(
+            padding: const EdgeInsets.fromLTRB(94,0,94,0),
+            child: GridView.builder(
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(), // To prevent inner scrolling
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 4, // 4 items per row
+                mainAxisSpacing: 10.0, // Spacing between rows
+                crossAxisSpacing: 20.0, // Spacing between columns
+                childAspectRatio: 1.36, // Adjust for card proportions
+              ),
+              itemCount: CertificationsUtils.certificates.length,
+              itemBuilder: (context, index) {
+                return CertificateCard(
+                  certificate: CertificationsUtils.certificates[index],
+                  certificateTitle: CertificationsUtils.titles[index],
+                );
+              },
             ),
-            itemCount: CertificationsUtils.certificates.length,
-            itemBuilder: (context, index) {
-              return CertificateCard(
-                certificate: CertificationsUtils.certificates[index],
-                certificateTitle: CertificationsUtils.titles[index],
-              );
-            },
           ),
           Space.y!,
           SizedBox(
