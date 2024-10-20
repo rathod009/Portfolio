@@ -14,7 +14,7 @@ class ScrollProvider extends ChangeNotifier {
             : index == 3
                 ? 241
                 : index == 4
-                  ? 242
+                  ? 243
                   : 250;
     controller.animateTo(
       AppDimensions.normalize(
@@ -37,9 +37,9 @@ class ScrollProvider extends ChangeNotifier {
             : index == 2
                 ? 0.76 * screenHeight
                 : index == 3
-                    ? 0.97 * screenHeight
+                    ? 1.04 * screenHeight
                     : index == 4
-                        ? 1.36 * screenHeight
+                        ? 1.24 * screenHeight
                         : 1.50 * screenHeight;
 
     controller.animateTo(
