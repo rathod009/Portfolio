@@ -12,7 +12,7 @@ class ScrollProvider extends ChangeNotifier {
         : index == 2
             ? 250
             : index == 3
-                ? 270
+                ? 230
                 : index == 4
                   ? 248
                   : 235;
@@ -37,7 +37,7 @@ class ScrollProvider extends ChangeNotifier {
             : index == 2
                 ? 0.76 * screenHeight
                 : index == 3
-                    ? 0.92 * screenHeight
+                    ? 0.108 * screenHeight
                     : index == 4
                         ? 1.16 * screenHeight
                         : 1.32 * screenHeight;
