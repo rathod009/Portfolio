@@ -33,13 +33,13 @@ class ScrollProvider extends ChangeNotifier {
     double offset = index == 0
         ? 0.0 * screenHeight
         : index == 1
-            ? 0.37 * screenHeight
+            ? 0.36 * screenHeight
             : index == 2
                 ? 0.75 * screenHeight
                 : index == 3
-                    ? 1.02 * screenHeight
+                    ? 1.01 * screenHeight
                     : index == 4
-                        ? 1.27 * screenHeight
+                        ? 1.28 * screenHeight
                         : 1.5 * screenHeight;
 
     controller.animateTo(
