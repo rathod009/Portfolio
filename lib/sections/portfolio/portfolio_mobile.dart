@@ -16,7 +16,7 @@ class PortfolioMobileTab extends StatelessWidget {
     double width = MediaQuery.of(context).size.width;
 
     // Adjust height and width based on screen size
-    double cardHeight = height * 0.28; // Dynamically set height for mobile view
+    double cardHeight = height * 0.25; // Dynamically set height for mobile view
     double cardWidth = width * 0.86; // Ensure it fits the screen width
 
     return Column(
