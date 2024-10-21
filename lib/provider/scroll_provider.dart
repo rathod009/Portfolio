@@ -39,7 +39,7 @@ class ScrollProvider extends ChangeNotifier {
                 : index == 3
                     ? 1.01 * screenHeight
                     : index == 4
-                        ? 1.28 * screenHeight
+                        ? 1.27 * screenHeight
                         : 1.5 * screenHeight;
 
     controller.animateTo(
